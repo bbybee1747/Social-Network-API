@@ -14,7 +14,7 @@ module.exports = {
       const user = await User.findOne({ _id: req.params.userId }).populate('thoughts').populate('friends');
 
       if (!user) {
-        return res.status(404).json({ message: 'No user with that Id' });
+        return res.status(404).json({ message: 'No users with that Id' });
       }
       res.status(200).json(user);
     } catch (err) {
@@ -38,7 +38,7 @@ module.exports = {
       const user = await User.findOneAndDelete({ _id: req.params.userId });
 
       if (!user) {
-        return res.status(404).json({ message: 'No user with that Id' });
+        return res.status(404).json({ message: 'No users with that Id' });
       }
       
       await Thought.deleteMany({ _id: { $in: user.thoughts } });
@@ -68,7 +68,7 @@ module.exports = {
       const friend = await User.findById(req.params.friendId);
 
       if (!user || !friend) {
-        return res.status(404).json({ message: 'User or Friend not found' });
+        return res.status(404).json({ message: 'That User or Friend was not found' });
       }
 
       if (!user.friends.includes(req.params.friendId)) {

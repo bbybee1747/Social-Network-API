@@ -25,6 +25,8 @@ Testing API POST and DELETE routes in Insomnia Core are able to successfully cre
 
 Walkthrough Videos
 
+https://drive.google.com/file/d/1aB0X9-Mei9OWm6tQ4n8LlYRpG5ATQDLx/view
+
 Installation:
 This repo is not to be deployed, if you wanted to, you could by doing the following:
 
@@ -73,6 +75,7 @@ This project is under no license.
 
 Submission:
 Github repository
+https://github.com/bbybee1747/Social-Network-API
 
 Questions:
 Here is a link to my github:
